@@ -3,14 +3,16 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Upgrade project') {
             steps {
-                echo 'Building...'
+                cd ./green
+                git pull
+                git checkout origin/main
             }
         }
-        stage('Test') {
+        stage('Start web server') {
             steps {
-                echo 'Testing...'
+                echo 'Run web server'
             }
         }
     }
