@@ -5,9 +5,7 @@ pipeline {
     stages {
         stage('Upgrade project') {
             steps {
-                cd ./green
-                git pull
-                git checkout origin/main
+                checkout scm
             }
         }
         stage('Start web server') {
