@@ -3,9 +3,11 @@
 pipeline {
     agent any
     stages {
-        stage('Start web server') {
+        stage('Checkout') {
             steps {
-                echo 'Run web server'
+                dir('repo') {
+                    checkout scm
+                }
             }
         }
     }
