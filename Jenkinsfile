@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run webserver') {
              steps {
-                 sh 'export BUILD_ID=dontKillMe python main.py &'
+                 sh 'JENKINS_NODE_COOKIE=dontKillMe python main.py &'
              }
         }
     }
