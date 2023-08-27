@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run webserver') {
              steps {
-                 sh 'BUILD_ID=dontKillMe python main.py &'
+                 sh 'export BUILD_ID=dontKillMe python main.py &'
              }
         }
     }
