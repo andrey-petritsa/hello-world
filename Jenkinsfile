@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run webserver') {
              steps {
-                 sh 'python main.py &'
+                 sh 'nohup python main.py &'
              }
         }
     }
