@@ -11,7 +11,7 @@ class Main:
         def hello_world():
             return "<p>Hello, World! How are you what is your name</p>"
 
-        sapp.run(host='0.0.0.0')
+        app.run(host='0.0.0.0')
 
 main = Main()
 main.run()
