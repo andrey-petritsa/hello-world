@@ -11,7 +11,7 @@ class Main:
         def hello_world():
             return "<p>Hello, World!</p>"
 
-        app.run()
+        app.run(host='0.0.0.0')
 
 main = Main()
 main.run()
