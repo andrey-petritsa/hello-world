@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run webserver') {
              steps {
-                 sh 'nohup python main.py &'
+                 sh 'BUILD_ID=dontKillMe python main.py &'
              }
         }
     }
