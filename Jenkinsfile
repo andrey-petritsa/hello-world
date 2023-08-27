@@ -17,6 +17,7 @@ pipeline {
 
         stage('Run webserver') {
              steps {
+                sh 'kill -9 $(lsof -t -i:5000)'
                  sh 'JENKINS_NODE_COOKIE=dontKillMe python main.py &'
              }
         }
