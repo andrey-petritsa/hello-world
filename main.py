@@ -11,7 +11,7 @@ class Main:
         def hello_world():
             return "<p>Hello, World!</p>"
 
-        app.run(debug=True)
+        app.run()
 
 main = Main()
 main.run()
