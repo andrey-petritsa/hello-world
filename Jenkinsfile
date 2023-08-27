@@ -17,7 +17,7 @@ pipeline {
 
         stage('Run webserver') {
              steps {
-                 sh '$ sudo nohup python main.py > log.txt 2>&1 &'
+                 sh 'sudo nohup python main.py > log.txt 2>&1 &'
              }
         }
     }
