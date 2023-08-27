@@ -5,10 +5,20 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                dir('repo') {
-                    checkout scm
-                }
+                checkout scm
             }
         }
+
+        stage('Update dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run webserver') {
+             steps {
+                 python3 main.py
+             }
+        }
     }
-}
+  }
